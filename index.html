@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diabetes Prediction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px 20px;
+    font-size: 17px;
+    padding: 8px;
+}
+.container{
+    background-color:rgb(154, 216, 216);
+    padding: 5px 20px 5px 20px;
+    border: 1px solid rgb(37, 139, 83);
+    border-radius: 5px;
+}
+.main_heading,a{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size:30px;
+text-align: center;
+color: darkblue;
+}
+.image{
+  border-radius: 8px;
+  width: 650px;
+  height: 400px;
+}
+
+input[type=number], select {
+
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(105, 175, 59);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.registerbtn {
+  background-color: #1f6cac;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+.registerbtn:hover {
+  background-color: red;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #4d00dbc5;
+  padding: 10px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<form action="/predict"method="post">
+<h2 class="main_heading"><a href = '/'>Diabetes Prediction</a></h2>
+<img class="image" src="https://media.istockphoto.com/photos/world-diabetes-day-healthcare-and-medical-concept-healthy-food-fresh-picture-
+id1279707247?b=1&k=20&m=1279707247&s=170667a&w=0&h=OyaID697FUaQ5_wcs5HIqtbKpKcp1zpYGBF3m3Uz0dQ="  align="right"/>
+<input type="number" name="Pregnancies" min="0" max="10" step="1" placeholder="Number of Pregnancies eg. 2"  required />
+<input type="number" name="Glucose Level" min="44" max="200" step="1" placeholder="Glucose (mg/dL) eg. 80" required/>
+<input type="number" name="Blood Pressure" min="30" max="150" step="1" placeholder="Blood Pressure (mmHg) eg. 80" required />
+<input type="number" name="Skin Thickness" min="7" max="110" step="1" placeholder="Skin Thickness (mm) eg. 55" required/>
+<input type="number" name="Insulin" min="99" max="744" step="1" placeholder="Insulin Level (IU/mL) eg. 175" required />
+<input type="number" name="BMI" min="7.2" max="80.6" step="0.1" placeholder="Body Mass Index (kg/m²) eg. 23.5" required />
+<input type="number" name="Diabetes PF" min="0.078" max="2.420" step="0.001" placeholder="Diabetes Pedigree Function eg. 0.588" required />
+<input type="number" name="Age" min="10" max="90" step="1" placeholder="Age (years) eg. 32" required />
+<button type="submit" class="registerbtn">Predict</button>
+
+</form>
+</div>
+
+  </body>
+  </html>
